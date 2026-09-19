@@ -5,13 +5,14 @@ import "./SpotlightCard.css";
 function SpotlightCard({
   children,
   spotlightColor = "rgba(255, 255, 255, 0.15)",
-}) {
+}) 
+{
   const cardRef = useRef(null);
 
   function handleMouseMove(event) {
     const card = cardRef.current;
 
-    if (!card) {
+    if (!card){
       return;
     }
 
@@ -24,7 +25,6 @@ function SpotlightCard({
     card.style.setProperty("--mouse-y", `${mouseY}px`);
     card.style.setProperty("--spotlight-color", spotlightColor);
   }
-
   return (
     <div
       ref={cardRef}
@@ -39,6 +39,6 @@ function SpotlightCard({
     </div>
   );
 }
-
 export default SpotlightCard;
+
 

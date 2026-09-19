@@ -1,22 +1,18 @@
 import BlurText from "./BlurText";
-import Prism from "./Prism";
+import GridDistortion from "./GridDistortion";
 
 function Hero() {
   return (
     <section className="hero" id="home">
 
-      <div className="prism-background">
-        <Prism
-          height={2.2}
-          baseWidth={4.5}
-          animationType="3drotate"
-          timeScale={0.35}
-          glow={1}
-          noise={0.25}
-          bloom={0.8}
-          scale={3.6}
-          suspendWhenOffscreen={true}
-        />
+      <div className="grid-distortion-background">
+      <GridDistortion
+        imageSrc="/code.jpg"
+        grid={15}
+        mouse={0.5}
+        strength={0.8}
+        relaxation={0.9}
+      />
       </div>
 
       <div className="hero-content">
